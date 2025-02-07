@@ -5,36 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaksi Top-Up</title>
     <style>
+        .wrapper {
+        width: 1100px;
+        margin: auto;
+        position: relative;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #3e0854;
+            background-color: #344CB7;
             color: #fff;
         }
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 0;
+            padding: 40px 0;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000957;
+            padding: 10px 20px;
+            /* border-radius: 8px;  */
+            width: 1440px;
+        }
+        .wrapper img{
+            height: auto;
+            width: 60px;
+        }
+        .login {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #577BC1;
+            padding: 10px 20px;
+            border-radius: 8px; 
+        }
+        .login a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
         }
         .step {
             margin-bottom: 40px;
             padding: 20px;
-            background-color: #4c0963;
+            background-color: #577BC1;
             border-radius: 8px;
         }
         .step-title {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+            color: black;
         }
         .step-title span {
             display: inline-block;
             width: 40px;
             height: 40px;
-            background-color: #ffd700;
-            color: #3e0854;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
             font-weight: bold;
             font-size: 20px;
             border-radius: 50%;
@@ -49,6 +83,7 @@
         }
         .form-group {
             margin-bottom: 15px;
+            display: flex;
         }
         .form-group input {
             width: calc(50% - 10px);
@@ -62,7 +97,7 @@
         }
         .form-group small {
             font-size: 12px;
-            color: #ffd700;
+            color: rgb(0, 0, 0);
         }
         .category-grid, .payment-grid {
             display: grid;
@@ -74,8 +109,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #ffd700;
-            color: #3e0854;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
             padding: 15px;
             border-radius: 8px;
             text-align: center;
@@ -105,10 +140,99 @@
             font-size: 12px;
             font-weight: bold;
         }
+        .menu {
+        float: right;
+        }
+        .login-form {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 250px;
+            background-color: rgb(181, 221, 212);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .login-form.active {
+            display: block;
+        }
+        .login-form h2 {
+            color: black;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 6px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 8px;
+            background-color: rgb(30, 144, 255);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: rgb(255, 223, 186);
+        }
+        .btn-primary {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5848d6;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color:#FFEB00;
+            color: black;
+            
+        }
+        footer {
+            background-color: #5848d6;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 5px;
+            
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        footer a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
+        <img src="images/logo.png" alt="">
+        <div class="menu" >
+            <div class="login">
+                <a href="#" onclick="showLoginForm()" >Daftar</a>
+            </div>
+        </div>
+    </div>
+        <div class="container">
         <!-- Step 1: Masukkan User ID -->
         <div class="step">
             <div class="step-title">
@@ -116,10 +240,10 @@
                 <h2>Masukkan User ID</h2>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Masukkan User ID">
-                <input type="text" placeholder="Zone ID">
+                <input type="text" placeholder="Masukkan User ID" required>
+                <input type="text" placeholder="Zone ID" required>
             </div>
-            <small>
+            <small style="color: black;">
                 Untuk mengetahui User ID Anda, silakan klik menu profil di bagian kiri atas pada menu utama game.
                 Contoh: 12345678(1234).
             </small>
@@ -131,7 +255,7 @@
                 <span>2</span>
                 <h2>Pilih Nominal Top-Up</h2>
             </div>
-            <span class="info-badge">10.781 item dibeli dalam satu jam terakhir</span>
+            <span class="info-badge">65.989 item dibeli dalam satu jam terakhir</span>
             <div class="category-grid">
                 <!-- Card Produk -->
                 <div class="category-card">
@@ -157,7 +281,7 @@
         <div class="step">
             <div class="step-title">
                 <span>3</span>
-                <h2>Pilih Pembayaran</h2>
+                <h2>Metode Pembayaran</h2>
             </div>
             <div class="payment-grid">
                 <!-- Card Pembayaran -->
@@ -166,7 +290,7 @@
                     <p>Dana</p>
                 </div>
                 <div class="payment-card">
-                    <img src="https://via.placeholder.com/100?text=QRIS" alt="QRIS">
+                    <img src="images/qris.jpg" alt="QRIS">
                     <p>QRIS</p>
                 </div>
                 <div class="payment-card">
@@ -174,11 +298,11 @@
                     <p>GoPay</p>
                 </div>
                 <div class="payment-card">
-                    <img src="https://via.placeholder.com/100?text=Bank+Transfer" alt="Bank Transfer">
-                    <p>Bank Transfer</p>
+                    <img src="images/indomaret.jpg" alt="Bank Transfer">
+                    <p>Indomaret</p>
                 </div>
                 <div class="payment-card">
-                    <img src="https://via.placeholder.com/100?text=ShopeePay" alt="ShopeePay">
+                    <img src="images/shoppee.jpg" alt="ShopeePay">
                     <p>ShopeePay</p>
                 </div>
                 <div class="payment-card">
@@ -188,6 +312,51 @@
                 <!-- Tambahkan metode pembayaran lainnya sesuai kebutuhan -->
             </div>
         </div>
+
+        <!-- Login Form -->
+        <div class="login-form" id="loginForm">
+            <h2>Form Login</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </div>
+        <!-- Step 4: Beli -->
+        <div class="step">
+            <div class="step-title">
+                <span>4</span>
+                <h2>Beli!</h2>
+            </div>
+            <p style="color: black;">
+                Masukkan alamat email untuk mendapatkan <strong>Coda Rewards sampai dengan 2%</strong> pada pembelian kamu.
+                Kamu juga akan mendapatkan bukti pembayaran dan berhak untuk mendapatkan promosi.
+            </p>
+            <form>
+                <div class="form-group">
+                    <input type="email" placeholder="Alamat E-mail" >
+                </div>
+                <!-- <div class="form-group">
+                    <label style="color: black;">
+                        <input type="checkbox"> Ya, Saya ingin menerima berita dan promosi melalui SMS atau WhatsApp
+                    </label>
+                </div> -->
+                <button type="submit" class="btn-primary">Beli Sekarang</button>
+            </form>
+        </div>
     </div>
+    <footer>
+        <p>&copy; 2025 Top-Up Game Inc. | <a href="#">Kebijakan Privasi</a> | <a href="#">Syarat dan Ketentuan</a></p>
+    </footer>
+    <script>
+        function showLoginForm() {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+
+        
