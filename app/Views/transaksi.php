@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transaksi Top-Up</title>
+    
     <style>
         .wrapper {
         width: 1100px;
@@ -30,7 +31,8 @@
             background-color: #000957;
             padding: 10px 20px;
             /* border-radius: 8px;  */
-            width: 1440px;
+            width: 100%;
+            padding: 5px 0;
         }
         .wrapper img{
             height: auto;
@@ -43,6 +45,7 @@
             background-color: #577BC1;
             padding: 10px 20px;
             border-radius: 8px; 
+            right: 20px;
         }
         .login a {
             color: #fff;
@@ -228,7 +231,7 @@
         <img src="images/logo.png" alt="">
         <div class="menu" >
             <div class="login">
-                <a href="#" onclick="showLoginForm()" >Daftar</a>
+                <a href="daftar.php">Daftar</a>
             </div>
         </div>
     </div>
@@ -316,9 +319,6 @@
         <!-- Login Form -->
         <div class="login-form" id="loginForm">
             <h2>Form Login</h2>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button type="submit">Login</button>
         </div>
         <!-- Step 4: Beli -->
         <div class="step">
@@ -346,12 +346,6 @@
     <footer>
         <p>&copy; 2025 Top-Up Game Inc. | <a href="#">Kebijakan Privasi</a> | <a href="#">Syarat dan Ketentuan</a></p>
     </footer>
-    <script>
-        function showLoginForm() {
-            const loginForm = document.getElementById('loginForm');
-            loginForm.classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
 
