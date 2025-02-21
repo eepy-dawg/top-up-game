@@ -1,0 +1,100 @@
+DEBUG - 2025-02-21 03:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 03:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 03:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 03:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-21 03:48:40 --> Validasi gagal: {"password":"The password field must be at least 6 characters in length."}
+DEBUG - 2025-02-21 03:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-21 04:02:29 --> Validasi gagal: {"password":"The password field must be at least 6 characters in length."}
+DEBUG - 2025-02-21 04:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 04:04:52 --> Jumlah user terdaftar: 1
+INFO - 2025-02-21 04:04:52 --> Data yang akan disimpan: {"username":"test","password":"$2y$10$NRioEPul\/FITciD1\/Kt1bOHaRa6etvXZwH1\/qCpPUORcGeFkAUrBa"}
+INFO - 2025-02-21 04:04:52 --> Data berhasil disimpan.
+DEBUG - 2025-02-21 04:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 04:05:47 --> Jumlah user terdaftar: 2
+ERROR - 2025-02-21 04:05:47 --> Validasi gagal: {"password":"The password field must be at least 6 characters in length."}
+DEBUG - 2025-02-21 04:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 04:06:04 --> Jumlah user terdaftar: 2
+INFO - 2025-02-21 04:06:04 --> Data yang akan disimpan: {"username":"wdawad","password":"$2y$10$jx1hGlJPnUGhuC05LXb1NegxZ1CHT5wuobuuBeVzdyefxiQYU0PGO"}
+INFO - 2025-02-21 04:06:04 --> Data berhasil disimpan.
+DEBUG - 2025-02-21 04:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 04:07:30 --> Jumlah user terdaftar: 3
+INFO - 2025-02-21 04:07:30 --> Data yang akan disimpan: {"username":"rqwewqeq","password":"$2y$10$ekxHApumURatFVeKo1jKMOH2NCGvR3azYRlMV41Xd59GXDPuMKSxy"}
+INFO - 2025-02-21 04:07:30 --> Data berhasil disimpan.
+DEBUG - 2025-02-21 04:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 06:09:08 --> Jumlah user terdaftar: 1
+INFO - 2025-02-21 06:09:08 --> Data yang akan disimpan: {"username":"operator","password":"$2y$10$L2TUouROz9qfJ\/eZ0XXsU.Ee9ECTVW\/v4N\/AaH7WguUCynQTGuL9e"}
+INFO - 2025-02-21 06:09:08 --> Data berhasil disimpan.
+DEBUG - 2025-02-21 06:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 06:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 06:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 06:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 06:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-21 06:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 06:15:01 --> Jumlah user terdaftar: 2
+INFO - 2025-02-21 06:15:01 --> Data yang akan disimpan: {"username":"ruskyy","password":"$2y$10$MfgMIPnQqUHoM4E0rAb78e.DZoTD8v8GjpUrbVAGyLb.leQqis3ri"}
+INFO - 2025-02-21 06:15:01 --> Data berhasil disimpan.
+DEBUG - 2025-02-21 06:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 06:15:40 --> Jumlah user terdaftar: 3
+ERROR - 2025-02-21 06:15:40 --> Validasi gagal: {"username":"The username field must contain a unique value."}
+DEBUG - 2025-02-21 06:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-21 06:16:54 --> Validasi gagal: {"username":"The username field must contain a unique value.","password":"The password field must be at least 6 characters in length."}
+CRITICAL - 2025-02-21 06:54:01 --> ErrorException: Array to string conversion
+[Method: GET, Route: daftar.php]
+in APPPATH\Views\daftar.php on line 99.
+ 1 APPPATH\Views\daftar.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\top-up-game\\app\\Views\\daftar.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\top-up-game\\app\\Views\\daftar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('daftar', [], true)
+ 5 APPPATH\Controllers\DaftarController.php(12): view('daftar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\top-up-game\\public\\index.php')
+CRITICAL - 2025-02-21 06:54:53 --> ErrorException: Array to string conversion
+[Method: GET, Route: daftar.php]
+in APPPATH\Views\daftar.php on line 99.
+ 1 APPPATH\Views\daftar.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\top-up-game\\app\\Views\\daftar.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\top-up-game\\app\\Views\\daftar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('daftar', [], true)
+ 5 APPPATH\Controllers\DaftarController.php(12): view('daftar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\top-up-game\\public\\index.php')
+CRITICAL - 2025-02-21 07:03:50 --> ErrorException: Array to string conversion
+[Method: GET, Route: daftar.php]
+in APPPATH\Views\daftar.php on line 99.
+ 1 APPPATH\Views\daftar.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\top-up-game\\app\\Views\\daftar.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\top-up-game\\app\\Views\\daftar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('daftar', [], true)
+ 5 APPPATH\Controllers\DaftarController.php(12): view('daftar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\top-up-game\\public\\index.php')
+CRITICAL - 2025-02-21 07:36:44 --> TypeError: implode(): Argument #2 ($array) must be of type ?array, string given
+[Method: GET, Route: daftar.php]
+in APPPATH\Views\daftar.php on line 98.
+ 1 APPPATH\Views\daftar.php(98): implode('<br>', '{"username":"The username field is required.","password":"The password field is required."}')
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\top-up-game\\app\\Views\\daftar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('daftar', [], true)
+ 5 APPPATH\Controllers\DaftarController.php(12): view('daftar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\top-up-game\\public\\index.php')

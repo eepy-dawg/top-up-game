@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@
         }
 
         .container {
-            background-color:  linear-gradient(to bottom, #6a95ff, #a1c4fd);;
+            background-color: linear-gradient(to bottom, #6a95ff, #a1c4fd);
             padding: 20px;
             border-radius: 15px;
             text-align: center;
@@ -88,13 +89,37 @@
         }
     </style>
 </head>
+
 <body>
+
+    <!-- Menampilkan pesan kesalahan -->
+    <?php if (session()->getFlashdata('errors')): ?>
+        <div class="alert alert-danger">
+            <?= implode('<br>', session()->getFlashdata('errors')) ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- Menampilkan pesan sukses -->
+    <?php if (session()->getFlashdata('success')): ?>
+        <div class="alert alert-success">
+            <?= session()->getFlashdata('success') ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- Menampilkan pesan error -->
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger">
+            <?= session()->getFlashdata('error') ?>
+        </div>
+    <?php endif; ?>
+
+
 
     <div class="container">
         <div class="title">Gabung Ke Fate’s Saber</div>
         <img src="images/logo.png" alt="Profile" class="profile-pic"> <!-- Ganti dengan URL gambar jika perlu -->
 
-        <form action="register.php" method="POST">
+        <form action="<?= site_url('/register-user') ?>" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -105,13 +130,14 @@
                 <input type="password" id="password" name="password" required>
             </div>
 
-            <button type="submit" class="btn-daftar">Daftar</button>
+            <button type="submit" class="btn-daftar"><a href="transaksi">Daftar</a></button>
         </form>
 
         <div class="bottom-text">
-            Sudah Memiliki Akun? <a href="login.php">Masuk</a>
+            Sudah Memiliki Akun? <a href="login">Masuk</a>
         </div>
     </div>
 
 </body>
+
 </html>

@@ -15,25 +15,30 @@ class DaftarController extends Controller
     public function process()
     {
         helper(['form', 'url']);
-
         $validation = \Config\Services::validation();
 
+        // Aturan validasi
         $validation->setRules([
             'username' => 'required|min_length[3]|is_unique[users.username]',
             'password' => 'required|min_length[6]'
         ]);
 
+        // Validasi input
         if (!$this->validate($validation->getRules())) {
             return redirect()->back()->withInput()->with('errors', $validation->getErrors());
         }
 
-        // Simpan data ke database
+        // Menyimpan data pengguna
         $userModel = new UserModel();
-        $userModel->save([
+        $data = [
             'username' => $this->request->getPost('username'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT) // Hash password
-        ]);
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+        ];
 
-        return redirect()->to('/daftar')->with('success', 'Akun berhasil didaftarkan!');
+        if ($userModel->insert($data)) {
+            return redirect()->to('/transaksi.php')->with('success', 'Akun berhasil didaftarkan!');
+        } else {
+            return redirect()->back()->with('error', 'Registrasi gagal, coba lagi.');
+        }
     }
 }
