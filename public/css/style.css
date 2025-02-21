@@ -1,0 +1,301 @@
+body {
+    background-color: #0D92F4;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #024CAA;
+}
+
+header img {
+    height: 50px;
+    width: auto;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.banner {
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.banner img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+p {
+    color: black;
+}
+
+.web-store {
+    margin-top: 30px;
+    color: black;
+}
+
+.store-item {
+    display: inline-block;
+    background: rgb(74,98,138);
+    background: linear-gradient(133deg, rgba(74,98,138,1) 26%, rgba(122,178,211,1) 72%);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.store-item a {
+    text-decoration: none;
+}
+
+.store-item img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #024CAA;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Mendorong footer ke bawah */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Menu */
+/* .menu {
+    margin-left: 200px;
+} */
+
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 1015px;
+}
+
+nav ul li {
+    float: right;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #EAD8C0;
+}
+
+/* Struktur halaman */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Mengisi ruang kosong */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+
+/* CSS untuk transaksi.html */
+.transaksi-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #4a0072;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.transaksi-container h2 {
+    margin-bottom: 15px;
+}
+
+.transaksi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* .transaksi-form input,
+.transaksi-form select, */
+.transaksi-form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.transaksi-form button {
+    background-color: #5848d6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.transaksi-form button:hover {
+    background-color: #3d005e;
+}
+
+.step {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgb(74,98,138);
+    background: linear-gradient(133deg, rgba(74,98,138,1) 26%, rgba(122,178,211,1) 72%);
+    border-radius: 8px;
+}
+
+.step-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.step-title span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.step-title h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.info-badge {
+    display: inline-block;
+    background-color: #ff4c4c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.category-grid, .payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.category-card, .payment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card img, .payment-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.category-card p, .payment-card p {
+    font-size: 14px;
+    font-weight: bold;
+}
+    
+.category-card:hover, .payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5848d6;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-primary:hover {
+    background-color:#FFEB00;
+    color: black;
+    
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+}
+.form-group input {
+    width: calc(50% - 10px);
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.form-group input:last-child {
+    margin-right: 0;
+}
+.form-group small {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+}
